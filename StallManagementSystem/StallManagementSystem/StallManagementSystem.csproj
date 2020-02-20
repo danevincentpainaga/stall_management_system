@@ -1,0 +1,502 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{545F8CC8-1C34-4CE3-A97C-B705BC77C6A4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StallManagementSystem</RootNamespace>
+    <AssemblyName>StallManagementSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="MySql.Data, Version=8.0.16.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdvancePaymentUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdvancePaymentUserControl.Designer.cs">
+      <DependentUpon>AdvancePaymentUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addUserClass.cs" />
+    <Compile Include="AddUserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddUserControl1.Designer.cs">
+      <DependentUpon>AddUserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdvancePaymentPayUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdvancePaymentPayUserControl.Designer.cs">
+      <DependentUpon>AdvancePaymentPayUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdvancePaymentStallsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdvancePaymentStallsUserControl.Designer.cs">
+      <DependentUpon>AdvancePaymentStallsUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllContractsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AllContractsUserControl.Designer.cs">
+      <DependentUpon>AllContractsUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ambulantClass.cs" />
+    <Compile Include="AmbulantMonthlyCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AmbulantMonthlyCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AmbulantMonthlyReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AmbulantMonthlyReportForm.Designer.cs">
+      <DependentUpon>AmbulantMonthlyReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AmbulantUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AmbulantUserControl.Designer.cs">
+      <DependentUpon>AmbulantUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="applicationClass.cs" />
+    <Compile Include="ApplicationMonthlyUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ApplicationMonthlyUserControl.Designer.cs">
+      <DependentUpon>ApplicationMonthlyUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ApplicationUserControl.Designer.cs">
+      <DependentUpon>ApplicationUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="billingClass.cs" />
+    <Compile Include="billingUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="billingUserControl.Designer.cs">
+      <DependentUpon>billingUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClearanceViewerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClearanceViewerForm.Designer.cs">
+      <DependentUpon>ClearanceViewerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connection.cs" />
+    <Compile Include="ContractCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContractCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ContractDetailsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ContractDetailsUserControl.Designer.cs">
+      <DependentUpon>ContractDetailsUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="contractsClass.cs" />
+    <Compile Include="ActiveContractsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ActiveContractsUserControl.Designer.cs">
+      <DependentUpon>ActiveContractsUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContractUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ContractUserControl.Designer.cs">
+      <DependentUpon>ContractUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContractForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractForm.Designer.cs">
+      <DependentUpon>ContractForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dueCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dueCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dueDateClass.cs" />
+    <Compile Include="duePaymentsCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>duePaymentsCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="lesseesClass.cs" />
+    <Compile Include="LesseesListCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LesseesListCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="lesseesRentedStallsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lesseesRentedStallsUserControl.Designer.cs">
+      <DependentUpon>lesseesRentedStallsUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LesseesUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LesseesUserControl.Designer.cs">
+      <DependentUpon>LesseesUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LessesStallNumbersUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LessesStallNumbersUserControl.Designer.cs">
+      <DependentUpon>LessesStallNumbersUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loginClass.cs" />
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagementUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ManagementUserControl.Designer.cs">
+      <DependentUpon>ManagementUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lesseeMonthlyCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lesseeMonthlyCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LesseeMonthlyReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LesseeMonthlyReportForm.Designer.cs">
+      <DependentUpon>LesseeMonthlyReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParentPaymentsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ParentPaymentsUserControl.Designer.cs">
+      <DependentUpon>ParentPaymentsUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="paymentsClass.cs" />
+    <Compile Include="PaymentsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PaymentsUserControl.Designer.cs">
+      <DependentUpon>PaymentsUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PendingContractDetailsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PendingContractDetailsUserControl.Designer.cs">
+      <DependentUpon>PendingContractDetailsUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PendingContractsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PendingContractsUserControl.Designer.cs">
+      <DependentUpon>PendingContractsUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PendingLesseesStallContractsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PendingLesseesStallContractsUserControl.Designer.cs">
+      <DependentUpon>PendingLesseesStallContractsUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecieptCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RecieptCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RecieptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecieptForm.Designer.cs">
+      <DependentUpon>RecieptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reportClass.cs" />
+    <Compile Include="ReportsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReportsUserControl.Designer.cs">
+      <DependentUpon>ReportsUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplashForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashForm.Designer.cs">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stallClass.cs" />
+    <Compile Include="stallsCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>stallsCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TerminatedListUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TerminatedListUserControl.Designer.cs">
+      <DependentUpon>TerminatedListUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInfoUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserInfoUserControl.Designer.cs">
+      <DependentUpon>UserInfoUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usersClass.cs" />
+    <Compile Include="StallsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StallsUserControl.Designer.cs">
+      <DependentUpon>StallsUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsersUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UsersUserControl.Designer.cs">
+      <DependentUpon>UsersUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewClearanceCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ViewClearanceCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="AdvancePaymentUserControl.resx">
+      <DependentUpon>AdvancePaymentUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddUserControl1.resx">
+      <DependentUpon>AddUserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdvancePaymentPayUserControl.resx">
+      <DependentUpon>AdvancePaymentPayUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdvancePaymentStallsUserControl.resx">
+      <DependentUpon>AdvancePaymentStallsUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllContractsUserControl.resx">
+      <DependentUpon>AllContractsUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AmbulantMonthlyCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AmbulantMonthlyCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AmbulantMonthlyReportForm.resx">
+      <DependentUpon>AmbulantMonthlyReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AmbulantUserControl.resx">
+      <DependentUpon>AmbulantUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationMonthlyUserControl.resx">
+      <DependentUpon>ApplicationMonthlyUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationUserControl.resx">
+      <DependentUpon>ApplicationUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="billingUserControl.resx">
+      <DependentUpon>billingUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClearanceViewerForm.resx">
+      <DependentUpon>ClearanceViewerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ContractCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="contractDetailsUserControl.resx">
+      <DependentUpon>ContractDetailsUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveContractsUserControl.resx">
+      <DependentUpon>ActiveContractsUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractForm.resx">
+      <DependentUpon>ContractForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractUserControl.resx">
+      <DependentUpon>ContractUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dueCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>dueCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="duePaymentsCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>duePaymentsCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LesseesListCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LesseesListCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lesseesRentedStallsUserControl.resx">
+      <DependentUpon>lesseesRentedStallsUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LesseesUserControl.resx">
+      <DependentUpon>LesseesUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LessesStallNumbersUserControl.resx">
+      <DependentUpon>LessesStallNumbersUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagementUserControl.resx">
+      <DependentUpon>ManagementUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lesseeMonthlyCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>lesseeMonthlyCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LesseeMonthlyReportForm.resx">
+      <DependentUpon>LesseeMonthlyReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParentPaymentsUserControl.resx">
+      <DependentUpon>ParentPaymentsUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentsUserControl.resx">
+      <DependentUpon>PaymentsUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PendingContractDetailsUserControl.resx">
+      <DependentUpon>PendingContractDetailsUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PendingContractsUserControl.resx">
+      <DependentUpon>PendingContractsUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PendingLesseesStallContractsUserControl.resx">
+      <DependentUpon>PendingLesseesStallContractsUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="RecieptCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RecieptCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecieptForm.resx">
+      <DependentUpon>RecieptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportsUserControl.resx">
+      <DependentUpon>ReportsUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashForm.resx">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stallsCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>stallsCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stallsUserControl.resx">
+      <DependentUpon>StallsUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TerminatedListUserControl.resx">
+      <DependentUpon>TerminatedListUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInfoUserControl.resx">
+      <DependentUpon>UserInfoUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersUserControl.resx">
+      <DependentUpon>UsersUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewClearanceCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ViewClearanceCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
